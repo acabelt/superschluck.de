@@ -1,0 +1,27 @@
+---
+import Image from "astro/components/Image.astro";
+
+import superschluckDesktop from "../assets/superschluck-desktop.png";
+import superschluckMobile from "../assets/superschluck-mobile.png";
+---
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Superschluck</title>
+  </head>
+  <body class="min-h-svh flex justify-center items-center">
+    <div class="max-w-3xl">
+      <h1 class="sr-only">Superschluck</h1>
+      <Image
+        src={superschluckDesktop}
+        alt="Superschluck"
+        class="hidden md:block"
+      />
+      <Image src={superschluckMobile} alt="Superschluck" class="md:hidden" />
+    </div>
+  </body>
+</html>
